@@ -46,6 +46,19 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.fa-trash-can {
+  color: red;
+}
+
+.fa-star {
+  color: yellow;
+}
+
+.card-trip-pricing {
+  font-size: 20px;
 }
 
 // Smallest device
@@ -82,5 +95,3 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-
-

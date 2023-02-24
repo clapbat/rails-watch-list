@@ -30,22 +30,24 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8ZHJhbWElMjBtb3ZpZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60);">
   <div class="container">
     <h1><strong><%= @list.name %></strong></h1>
-    <%= link_to "Add a new movie", new_list_bookmark_path(@list), class: "btn btn-gradient" %>
+    <%= link_to "Add a movie", new_list_bookmark_path(@list), class: "btn btn-warning" %>
   </div>
 </div>
-<div class="grid-container">
-  <% @list.movies.each do |movie| %>
-    <div class="card-trip">
-      <img src="<%= movie.poster_url %>">
-      <div class="card-trip-infos">
+
+<div class="card" style="width: 18rem;">
+  <% @list.bookmarks.each do |bookmark| %>
+  <div class="card" style="width: 18rem;">
+      <img src="<%= bookmark.movie.poster_url %>">
+      <div class="card-body">
         <div>
-          <h2><%= movie.title %></h2>
-          <p><%= movie.overview %></p>
-          <% movie.bookmarks.each do |bookmark|%>
+          <h5 class="card-title"><%= bookmark.movie.title %></h5>
+          <p class="card-text"><%= bookmark.movie.overview %></p>
             <p class="mt-2"><i class="fa-regular fa-bookmark"></i>  <strong><%= bookmark.comment %></strong></p>
-          <% end %>
         </div>
-        <h2 class="card-trip-pricing"><%= movie.rating %></h2>
+        <h2 class="card-trip-pricing"><%= bookmark.movie.rating %><i class="fa-solid fa-star"></i></h2>
+        <%= link_to bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete?"} do %>
+          <i class="fa-regular fa-trash-can"></i>
+          <% end %>
       </div>
     </div>
   <% end %>
