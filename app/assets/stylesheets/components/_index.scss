@@ -9,6 +9,8 @@
   background-position: center;
   padding: 150px 0;
   width: 100%;
+  height: auto;
+  text-align: center;
 }
 
 .banner h1 {
@@ -38,7 +40,7 @@
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .cards {
@@ -46,7 +48,6 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   padding: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .fa-trash-can {
@@ -58,8 +59,37 @@
 }
 
 .card-trip-pricing {
-  font-size: 20px;
+  font-size: 14px;
+  color: gray;
 }
+
+.card-text {
+  color: gray;
+  font-size: 14px;
+}
+
+.card-title {
+  font-size: 17px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.items {
+  display: flex;
+}
+
+.mt-2 {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.text {
+  text-decoration: none;
+  color: white;
+}
+
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {

@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfV8Z2tlnWLkWLim2q6WVq0TuToaK7wvLlBFlx7cAHgHUgBI4Dke2VA3jp-NStODYvbkc&usqp=CAU" />
+      <img src="https://cdn-icons-png.flaticon.com/512/3304/3304517.png" />
 </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -10,10 +10,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">My lists</a>
+            <a class="nav-link" ></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">New list</a>
+            <a class="nav-link" href="/lists/new">New List</a>
           </li>
           <li class="nav-item dropdown">
             <img id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
@@ -27,18 +27,19 @@
     </div>
   </div>
 </div>
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://media.istockphoto.com/id/1336937059/photo/film-reels-on-black-background-movie-video-and-cinema-prodaction-and-edition-concept.jpg?b=1&s=170667a&w=0&k=20&c=3Y_OD6qSJIP-9DNcNk-yIZ7CrcOJOLpFr2jfWIbegZA=);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://img.freepik.com/free-photo/film-projector-dark-background-close-up-old-retro-things-shoot-with-vintage-style-colors-toned_155003-32076.jpg?w=1060&t=st=1677444655~exp=1677445255~hmac=95dc0179d64a4e9f4982c7110971818a006c8d8cf9405f8293ef305ba0228e75);">
   <div class="container">
     <h1>My favorite movies</h1>
     <p><i>The best movies for me.</i></p>
-    <a class="btn btn-warning" <%= link_to "Make your movie list!", new_list_path %>></a></div>
+<a class="btn btn-warning" href="/lists/new">Make your movie list!</a>
+  </div>
 </div>
 
 
 <div class="cards">
    <% @lists.each do |list| %>
-       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8ZHJhbWElMjBtb3ZpZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60)">
-            <%= link_to list.name, list_path(list) %>
-        </div>
+       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1581905764498-f1b60bae941a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80)">
+          <a class="text" <%= link_to list.name, list_path(list) %>></a>
+       </div>
    <% end %>
 </div>
